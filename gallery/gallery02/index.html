@@ -1,0 +1,148 @@
+---
+layout: page
+title: "NYC"
+description: "Adventures"
+active: gallery
+header-img: "img/galleries/g02/nyc2.jpg"
+album-title: "Brief visit to Big Apple"
+images:
+ - image_path: /img/galleries/g02/nyc1.jpg
+   caption: New York City
+   mfp-title: Adventures
+   copyright: Mark's Photos
+ - image_path: /img/galleries/g02/nyc2.jpg
+   caption: New York City
+   copyright: Mark's Photos
+ - image_path: /img/galleries/g02/nyc3.jpg
+   caption: New York City
+   copyright: Mark's Photos
+ - image_path: /img/galleries/g02/nyc4.jpg
+   caption: New York City
+   mfp-title: Adventures
+   copyright: Mark's Photos
+ - image_path: /img/galleries/g02/nyc5.jpg
+   caption: New York City
+   copyright: Mark's Photos
+ - image_path: /img/galleries/g02/nyc6.jpg
+   caption: New York City
+   copyright: Mark's Photos
+ - image_path: /img/galleries/g02/nyc7.jpg
+   caption: New York City
+   copyright: Mark's Photos
+ - image_path: /img/galleries/g02/nyc8.jpg
+   caption: Adventures
+   copyright: Mark's Photos
+ - image_path: /img/galleries/g02/nyc10.jpg
+   caption: Adventures
+   copyright: Mark's Photos
+ - image_path: /img/galleries/g02/nyc11.jpg
+   caption: New York City
+   copyright: Mark's Photos
+ - image_path: /img/galleries/g02/nyc12.jpg
+   caption: Adventures
+   copyright: Mark's Photos
+ - image_path: /img/galleries/g02/nyc13.jpg
+   caption: Adventures
+   copyright: Mark's Photos
+ - image_path: /img/galleries/g02/nyc14.jpg
+   caption: New York City
+   copyright: Mark's Photos
+ - image_path: /img/galleries/g02/nyc15.jpg
+   caption: Adventures
+   copyright: Mark's Photos
+ - image_path: /img/galleries/g02/nyc16.jpg
+   caption: Adventures
+   copyright: Mark's Photos
+ - image_path: /img/galleries/g02/nyc17.jpg
+   caption: New York City
+   copyright: Mark's Photos
+ - image_path: /img/galleries/g02/nyc18.jpg
+   caption: Adventures
+   copyright: Mark's Photos
+ - image_path: /img/galleries/g02/nyc19.jpg
+   caption: Adventures
+   copyright: Mark's Photos
+ - image_path: /img/galleries/g02/nyc20.jpg
+   caption: Adventures
+   copyright: Mark's Photos
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h2>{{page.album-title}}</h2>
+
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+
+{% for image in page.images %}
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+
+					</header>
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>{{image.caption}}</h3>
+							<p>{{image.copyright}}</p>
+						</div>
+					</figcaption>
+				</figure>
+
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script>
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+          type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+      image: {
+         titleSrc: function(item) {
+             return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+</body></html>
