@@ -3,7 +3,7 @@ title:  Mark's
 email: "marksh100@yahoo.com"
 description: "Photo Journal"
 url: "https://markshv.github.io"
-baseurl: "/"
+baseurl: ""
 #facebook_username: ""
 #twitter_username: ""
 instagram_username: "marknelya"
@@ -33,8 +33,8 @@ comments :
 
 # Internal nav
 nav:
-  - GALLERY: "https://markshv.github.io/gallery/"    
-  - ABOUT: "https://markshv.github.io/about/"
+  - GALLERY: "http://markshv.github.io/gallery/"
+  - ABOUT: "http://markshv.github.io/about/"
 
 # All translation keys
 translations:
